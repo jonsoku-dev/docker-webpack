@@ -1,0 +1,21 @@
+version: "3"
+services:
+  dockersass:
+    container_name: dockersass
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    volumes:
+      - ./:/app/
+      - /app/node_modules
+    networks:
+      - test
+    ports:
+      - "921:921"
+networks:
+  test:
+    driver: bridge
+
+volumes:
+  data:
+    driver: local
