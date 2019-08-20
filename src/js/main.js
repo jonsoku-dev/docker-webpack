@@ -1,3 +1,2 @@
-require("../css/main.scss");
-
-console.log("test console !");
+import "../css/main.scss";
+import "./babletest";
